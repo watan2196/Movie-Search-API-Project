@@ -1,0 +1,55 @@
+<% include partials/header %>
+
+<div class="centered">
+		   <div class="centered text-center" margin-top="50%" margin-bottom="50%">
+			<h1><%= data2.Title %></h1>
+		  </div>
+		<div class="container" style="margin-left:2%;">
+			<div class="jumbotron" >
+				<div class="row">
+					<div class="col-4">
+						<img src=<%= data2.Poster %> class="img-thumbnail">
+					</div>
+					
+					
+					<div class="container" style="padding-top:1%;" >
+					<strong>Title: <%= data2.Title %> - <%= data2.Type %></strong>	 
+					</div>
+					
+					<div class="container" style="padding-top:1%;" >
+						<strong>Year: <%= data2.Year %></strong>
+					</div>
+						<br>
+					<div class="container" style="padding-top:1%;" >
+						 <strong>Genre: <%= data2.Genre %></strong>
+					</div>
+					<br>
+					<div class="container" style="padding-top:1%;" >
+						<strong>Director: <%= data2.Director %> </strong>
+					</div>
+					<br>
+					<div class="container" style="padding-top:1%;" >
+						<strong>Actors: <%= data2.Actors %></strong> 
+					</div>
+					<br>
+					<div class="container" style="padding-top:1%;" >
+						 <strong> Plot: <%= data2.Plot %></strong> 
+					</div>
+					<br>
+					<div class="container" style="padding-top:1%;" >
+						 <strong> IMDB Rating: <%= data2.imdbRating %></strong> 
+					</div>
+					<br>
+					<div class="container" style="padding-top:1%;" >
+						<strong> Website:<a href="<%= data2.Website %>"><%= data2.Website %></a></strong> 
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+ 
+<form action="/" style="text-align:center;margin-bottom:6%;">
+<button type="submit" id="zoom" class="btn btn-lrg">Go Back</button>	
+</form>
+<% include partials/footer %>

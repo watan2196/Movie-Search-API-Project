@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+
+<div class="centered">
+   <div class="centered text-center" margin-top="50%" margin-bottom="50%">
+    <h1>Results:</h1>
+  </div>
+<% data["Search"].forEach(function(movie){%>
+
+<div class="container" style="margin-left:2%;">
+	<div class="jumbotron" >
+		<div class="row">
+			<div class="col-4">
+				<img src=<%= movie["Poster"] %> class="img-thumbnail">
+			</div>
+						<div class="row mb-4" style="padding-top:1%;margin-left:5%;" >
+						<strong><%= movie["Title"] %></strong> -<strong>
+						<%= movie["Type"] %></strong> - <strong><%= movie["Year"] %></strong> 	
+						<a href="/details/:<%= movie["Title"] %>"><button id="zoom" 
+		                  class="btn-btn-light" type="submit">Know More</button></a>
+						</div>
+						 		
+		</div>
+	</div>
+</div>
+	
+	
+	
+<% }); %>
+
+</div>
+ 
+<form action="/" style="text-align:center;margin-bottom:6%;">
+<button type="submit" id="zoom" class="btn btn-lrg">Search Again</button>	
+</form>
+<% include partials/footer %>

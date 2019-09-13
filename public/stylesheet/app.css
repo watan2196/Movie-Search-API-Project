@@ -1,0 +1,81 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+
+.topics{
+	height:100px;
+	border:1px solid black;
+	text-align:center;
+	
+	
+}
+.col-sm-4 .topics{height:200px;}
+.topics p{
+	position:absolute;top:48%;left:20%;right:20%;font-family:bold;
+}
+
+.col-sm-4 *{	transition: all 0.5s linear 0s;}
+.topics i{transform:scale(0);position:absolute;top:50%;left:50%;}
+.topics:hover i{transform:scale(4);color:green;}
+.topics:hover p{display:none;}
+.topics:hover {
+
+	background-color:#BFFCEF;
+	transform:scale(1.1);
+	border:1px solid ;
+}
+.contents{
+	margin-top:3%;margin-left:1px; 
+}
+.rightsidecontents{
+	margin-top:3%;margin-right:1px;
+}
+.main{
+	margin-left:2%;text-align:center;margin-right:2%;
+}
+.doing{
+	margin-left:3%;
+}
+.first{
+  animation-name:animate;
+  animation-delay:0s;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-iteration-count:1;
+}
+.second{
+  animation-name:animate;
+  animation-delay:0s;
+  animation-duration:1.3s;
+  animation-timing-function:linear;
+  animation-iteration-count:1;
+}
+.third{
+  animation-name:animate;
+  animation-delay:0s;
+  animation-duration:1.6s;
+  animation-timing-function:linear;
+  animation-iteration-count:1;
+}
+.forth{
+  animation-name:animate;
+  animation-delay:0s;
+  animation-duration:1.9s;
+  animation-timing-function:linear;
+  animation-iteration-count:1;
+}
+@keyframes animate{
+  0%{
+    transform:scale(2);
+	 color:red;
+  }
+}
