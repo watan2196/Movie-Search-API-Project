@@ -20,9 +20,16 @@ app.get("/results",function(req,res){
 	request("http://www.omdbapi.com/?apikey=abf86467&s="+query,function(error,response,body){
 	if(!error && response.statusCode==200){
 	var data=JSON.parse(body);
-		console.log(data);
+		if (data.Response.toLowerCase() === "false") {
+        res.render("not-found");
+      }
+		else
+		{
+			console.log(data);
 		res.render("results",{data:data});
+		}
 	}
+	
 	
 	});
 });
